@@ -104,7 +104,11 @@ document.querySelectorAll('.js-add-to-cart').forEach((button)=> {
             quantity:1
            });
        }
-       
-       console.log(cart);
+    let cartquan=0;
+       cart.forEach((item)=>{
+        cartquan+=item.quantity;
+       });
+document.querySelector('.js-cart-quantity').innerHTML=cartquan;
     });
+    
 });
