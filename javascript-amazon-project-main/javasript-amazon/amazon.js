@@ -1,3 +1,9 @@
+import {cart} from '../data/cart.js';
+
+
+//module only works with live server
+
+
 let productsHTML = '';
 products.forEach((product) => {
     productsHTML += `
