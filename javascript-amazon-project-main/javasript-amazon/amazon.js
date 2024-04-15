@@ -1,8 +1,7 @@
-import {cart} from '../data/cart.js';
-
+import {cart,addToCart} from '../data/cart.js';
+import {products} from '../data/products.js'
 
 //module only works with live server
-
 
 let productsHTML = '';
 products.forEach((product) => {
@@ -50,35 +49,20 @@ products.forEach((product) => {
 
 document.querySelector('.js-product-grid').innerHTML = productsHTML;
 
+function updateCartQuantity(){
+    let cartQuantity = 0;
+    cart.forEach((cartItem) => {
+        cartQuantity += cartItem.quantity;
+    });
+    document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+}
 const addedMessageTimeouts={};
 document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     button.addEventListener('click', () => {
         const { productId } = button.dataset;
-        let matchingItem;
-        cart.forEach((item) => {
-            if (productId === item.productId) {
-                matchingItem = item;
-            }
-        });
-
-        const quantitySelector = document.querySelector(`.js-quantity-selector[data-product-id="${productId}"]`);
-        const quantity = Number(quantitySelector.value);
-
-        if (matchingItem) {
-            matchingItem.quantity += quantity;
-        } else {
-            cart.push({
-                productId,
-                quantity
-            });
-        }
-
-        let cartQuantity = 0;
-        cart.forEach((item) => {
-            cartQuantity += item.quantity;
-        });
-        document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
-
+        
+        addToCart(productId);
+        updateCartQuantity();
         const addedMessage = document.querySelector(`.js-added-to-cart[data-product-id="${productId}"]`);
         addedMessage.classList.add('added-to-cart-visible');
 
@@ -86,7 +70,6 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
         if (previousTimeoutId) {
           clearTimeout(previousTimeoutId);
         }
-  
         const timeoutId = setTimeout(() => {
             // addedMessage.classList.remove('added-to-cart-visible');
             addedMessage.classList.add('hidden');
