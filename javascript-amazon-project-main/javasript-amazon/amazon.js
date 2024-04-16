@@ -1,4 +1,4 @@
-import {cart,addToCart} from '../data/cart.js';
+import {cart,addToCart,calcualteCartQuantity} from '../data/cart.js';
 import {products} from '../data/products.js'
 import { formatCurrency } from './utils/money.js';
 //module only works with live server
@@ -50,10 +50,7 @@ products.forEach((product) => {
 document.querySelector('.js-product-grid').innerHTML = productsHTML;
 
 function updateCartQuantity(){
-    let cartQuantity = 0;
-    cart.forEach((cartItem) => {
-        cartQuantity += cartItem.quantity;
-    });
+   const cartQuantity= calcualteCartQuantity();
     document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 }
 const addedMessageTimeouts={};
