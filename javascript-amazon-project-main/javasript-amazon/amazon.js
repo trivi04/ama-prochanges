@@ -1,4 +1,4 @@
-import {cart,addToCart,calcualteCartQuantity} from '../data/cart.js';
+import {cart,addToCart,calculateCartQuantity} from '../data/cart.js';
 import {products} from '../data/products.js'
 import { formatCurrency } from './utils/money.js';
 //module only works with live server
@@ -20,7 +20,7 @@ products.forEach((product) => {
                 </div>
             </div>
             <div class="product-price">
-                ${formatCurrency(product.priceCents)}
+                $${formatCurrency(product.priceCents)}
             </div>
             <div class="product-quantity-container">
                 <select class="js-quantity-selector" data-product-id="${product.id}">
@@ -50,7 +50,7 @@ products.forEach((product) => {
 document.querySelector('.js-product-grid').innerHTML = productsHTML;
 
 function updateCartQuantity(){
-   const cartQuantity= calcualteCartQuantity();
+   const cartQuantity= calculateCartQuantity();
     document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
 }
 const addedMessageTimeouts={};
