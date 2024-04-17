@@ -102,3 +102,4 @@ export function calculateCartQuantity(){
 //   document.querySelector('.js-return-to-home-link')
 //     .innerHTML = `${cartQuantity} items`;
 //   }
+
