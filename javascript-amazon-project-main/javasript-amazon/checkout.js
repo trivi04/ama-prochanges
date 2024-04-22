@@ -231,8 +231,7 @@ document.querySelector('.js-return-to-home-link')
   .innerHTML = `${cartQuantity} items`;
 
 
-
-  function renderPaymentSummary(){
+function renderPaymentSummary(){
     let productPriceCents=0;
     cart.forEach((cartItem)=>{
       const product=getProduct(cartItem.productId);
