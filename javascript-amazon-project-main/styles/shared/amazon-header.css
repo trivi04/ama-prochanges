@@ -1,6 +1,6 @@
 .amazon-header {
   background-color: rgb(19, 25, 33);
-  color: white;
+  color: #f50041;
   padding-left: 15px;
   padding-right: 15px;
 
@@ -13,6 +13,14 @@
   left: 0;
   right: 0;
   height: 60px;
+  z-index: 2;
+}
+
+.amazon-header-right-section{
+  color: blue;
+}
+.cart-quantity{
+  color:white;
 }
 
 .amazon-header-left-section {

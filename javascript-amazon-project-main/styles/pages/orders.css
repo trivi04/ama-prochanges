@@ -218,3 +218,14 @@
     padding: 12px;
   }
 }
+
+.amazon-header{
+  z-index: 2;
+  background-color: #f50041;
+}
+.amazon-header-right-section{
+  color: blue;
+}
+.cart-quantity{
+  color:white;
+}

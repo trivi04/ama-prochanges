@@ -211,6 +211,9 @@
   background-color:black ;
   color: white;
 }
+.place-order-button:hover{
+  background-color: red;
+}
 
 /* .quantity-input {
   width: 30px;
@@ -235,3 +238,14 @@
 .is-editing-quantity .update-quantity-link {
   display: none;
 } */
+
+.amazon-header{
+  z-index: 2;
+  background-color: #f50041;
+}
+.amazon-header-right-section{
+  color: blue;
+}
+.cart-quantity{
+  color:white;
+}
