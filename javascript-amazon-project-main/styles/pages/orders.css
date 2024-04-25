@@ -203,6 +203,10 @@
   .buy-again-button {
     width: 100%;
     margin-bottom: 15px;
+    color: black;
+  }
+  .buy-again-button:active{
+    color: #f50041;
   }
 
   .product-actions {
@@ -228,4 +232,8 @@
 }
 .cart-quantity{
   color:white;
+}
+a{
+  text-decoration: none;
+  
 }

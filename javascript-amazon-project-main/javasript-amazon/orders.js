@@ -199,18 +199,17 @@ cart.forEach((cartItem) => {
             </div>
             <div class="product-details">
                 <div class="product-name">${matchingProduct.name}</div>
-                <div class="product-delivery-date">Arriving on: Tuesday, June 21</div>
+                
                 <div class="product-quantity">Quantity: ${cartItem.quantity}</div>
                 <button class="buy-again-button button-primary">
                     <img class="buy-again-icon" src="images/icons/buy-again.png">
-                    <span class="buy-again-message">Buy it again</span>
+                    <a href="amazon.html"><span class="buy-again-message">Buy it again</span></a>
                 </button>
             </div>
         </div>
     `;
 });
 
-// Set the generated HTML to the order container
 const orderContainer = document.querySelector('.js-order-container');
 if (orderContainer) {
     orderContainer.innerHTML = `
@@ -218,7 +217,7 @@ if (orderContainer) {
             <div class="order-header-left-section">
                 <div class="order-date">
                     <div class="order-header-label">Order Placed:</div>
-                    <div>August 12</div>
+                    
                 </div>
                 <div class="order-total">
                     <div class="order-header-label">Total:</div>
@@ -239,5 +238,4 @@ if (orderContainer) {
     `;
 }
 
-// Render the payment summary
 renderPaymentSummary();

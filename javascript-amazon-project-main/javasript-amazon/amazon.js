@@ -14,9 +14,9 @@ function generateProductHTML(products) {
                 <div class="product-name limit-text-to-2-lines">
                     ${product.name}
                 </div>
-                
+
                 <div class="product-price">
-                    $${formatCurrency(product.priceCents)}
+                &#8377 ${formatCurrency(product.priceCents)}
                 </div>
                 <div class="product-quantity-container">
                     <select class="js-quantity-selector" data-product-id="${product.id}">

@@ -120,9 +120,7 @@ cart.forEach((cartItem) => {
   cartSummaryHTML += `
     <div class="cart-item-container
       js-cart-item-container-${matchingProduct.id}">
-      <div class="delivery-date">
-        Delivery date: Tuesday, June 21
-      </div>
+      
 
       <div class="cart-item-details-grid">
         <img class="product-image"
@@ -133,16 +131,13 @@ cart.forEach((cartItem) => {
             ${matchingProduct.name}
           </div>
           <div class="product-price">
-            $${formatCurrency(matchingProduct.priceCents)}
+          &#8377 ${formatCurrency(matchingProduct.priceCents)}
           </div>
           <div class="product-quantity">
             <span>
               Quantity: <span class="quantity-label">${cartItem.quantity}</span>
             </span>
-            <span class="update-quantity-link link-primary js-update-link"
-            data-product-id="${matchingProduct.id}">
-              Update
-            </span>
+           
             <span class="delete-quantity-link link-primary js-delete-link" data-product-id="${matchingProduct.id}">
               Delete
             </span>
@@ -193,9 +188,13 @@ function renderPaymentSummary(){
     cart.forEach((cartItem)=>{
       const product=getProduct(cartItem.productId);
 productPriceCents+= product.priceCents*cartItem.quantity;
+
     });
     console.log(productPriceCents);
-
+   let tax=productPriceCents*0.1;
+   let charges=15.00;
+   let total=tax+productPriceCents+charges*100;
+   console.log(total);
      
     const PaymentSummaryHTML=`
 <div class="payment-summary-title">
@@ -204,27 +203,27 @@ productPriceCents+= product.priceCents*cartItem.quantity;
 
           <div class="payment-summary-row">
             <div>Items (3):</div>
-            <div class="payment-summary-money">$${formatCurrency(productPriceCents)}</div>
+            <div class="payment-summary-money">&#8377 ${formatCurrency(productPriceCents)}</div>
           </div>
 
           <div class="payment-summary-row">
             <div>Shipping &amp; handling:</div>
-            <div class="payment-summary-money">$$5</div>
+            <div class="payment-summary-money"> &#8377 15</div>
           </div>
 
           <div class="payment-summary-row subtotal-row">
             <div>Total before tax:</div>
-            <div class="payment-summary-money">$${formatCurrency(productPriceCents)}</div>
+            <div class="payment-summary-money">&#8377 ${formatCurrency(productPriceCents)}</div>
           </div>
 
           <div class="payment-summary-row">
             <div>Estimated tax (10%):</div>
-            <div class="payment-summary-money">$${formatCurrency(productPriceCents)+formatCurrency(productPriceCents)*0.01}</div>
+            <div class="payment-summary-money">&#8377 ${formatCurrency(tax)}</div>
           </div>
 
           <div class="payment-summary-row total-row">
             <div>Order total:</div>
-            <div class="payment-summary-money">$52.51</div>
+            <div class="payment-summary-money">&#8377 ${formatCurrency(total)}</div>
           </div>
 
           <button class="place-order-button button-primary">
