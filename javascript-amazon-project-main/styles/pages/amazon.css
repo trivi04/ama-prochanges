@@ -155,6 +155,11 @@
   border-radius: 50px;
   background-color:black ;
   color: white;
+  border-color: white;
+}
+.add-to-cart-button:hover{
+  color: white;
+  background-color: red;
 }
 
 .added-to-cart {
@@ -177,6 +182,13 @@
 
 .amazon-header{
   z-index: 2;
+  background-color: #f50041;
+}
+.amazon-header-right-section{
+  color: blue;
+}
+.cart-quantity{
+  color:white;
 }
 
 
