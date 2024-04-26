@@ -88,9 +88,7 @@ width: 200px;
 }
 
 .product-image {
-  /* Images will overflow their container by default. To
-    prevent this, we set max-width and max-height to 100%
-    so they stay inside their container. */
+  
   max-width: 100%;
   max-height: 100%;
   height: 200px;
@@ -146,9 +144,7 @@ border-color: #f50041;
   align-items: center;
   margin-bottom: 8px;
 
-  /* At first, the "Added to cart" message will
-     be invisible. Use JavaScript to change the
-     opacity and make it visible. */
+  
   opacity: 0;
 }
 
@@ -180,13 +176,7 @@ border-color: #f50041;
   opacity: 1;
 }
 
-/* body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background: linear-gradient(to left top,blue,violet);
-} */
+
 
 .amazon-header{
   z-index: 2;
@@ -235,26 +225,7 @@ border-color: #f50041;
   right: 10px;
 }
 
-/* .main i{
-    height: 50px;
-    width: 50px;
-    background: white;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    font-size: 1.5rem;
-    transform: translateY(-50%);
-    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
-}
-.main i:first-child{
-    left: 22px;
-}
-.main i:last-child{
-    right: -22px;
-} */
+
 .products-grid.dragging .card{
     cursor:grabbing;
     user-select: none;
@@ -264,38 +235,7 @@ border-color: #f50041;
     align-items: center;
     justify-content: center;
 }
-/* .products-grid {
-    height:500px;
-    list-style: none;
-    background: white;
-    border-radius: 8px;
-    display: flex;
-    padding-bottom: 15px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    cursor: pointer;
-} */
-/* .pro .img{
-    background: violet;
-    width: 148px;
-    height: 148px;
-    border-radius: 50%;
-} */
-/* .card .img img{
-    width:140px;
-    height: 140px;
-    object-fit: cover;
-}
-.card h2{
-    font-weight: 500;
-    font-size: 1.56rem;
-    margin: 30px 0 50px;
-}
-.card span{
-    color: #6a6d78;
-    font-size: 1.31rem;
-} */
+
 
 @media screen and (max-width:900px) {
     .main .products-grid{
@@ -307,4 +247,88 @@ border-color: #f50041;
     .main .products-grid{
     grid-auto-columns: 100%
     }
+}
+body {
+  margin: 0;
+  font-family: 'Prompt', sans-serif;
+  /* color: black; */
+  /* background: #0f0f10; */
+  overflow-x: hidden;
+}
+.main{
+  background-color: white;
+  /* color: #0f0f10; */
+}
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  padding-top: 100px;
+  color: white;
+  background: white;
+
+}
+
+.blue {
+  background: #3c31dd;
+}
+
+.red {
+  background: #dd3f31;
+}
+
+.pink {
+  background: #202731;
+  overflow: hidden;
+  height: 50px;
+}
+
+.dark {
+  background: #0f0f10;
+}
+.spacer{
+aspect-ratio: 900/300;
+height: 500px;
+width: 100%;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+.layer1{
+/* background-image: url('./images/layered-waves-haikei\ \(2\).svg'); */
+background-image: url('./images/layered-waves-haikei\ \(2\)as1.svg');
+background-image: url('.../');
+/* height: 500px; */
+}
+.layer2{
+background-image: url('./images/layered-waves-haikei\ \(2\)as1.svg');
+/* background-image: url('./images/layered-waves-haikei.svg'); */
+/* background-image: url('./images/layeredb1.png'); */;
+}
+.layer3{
+background-image: url('./images/stacked-waves-haikei.svg');
+}
+
+.flip{
+transform: rotate(180deg);
+}
+section h1{
+padding: 40px;
+font-size: 50px;
+}
+.blob-motion {
+  position: absolute;
+  transform: translateY(-20%);
+  z-index: 0;
+}
+
+.blob-content {
+  z-index: 1;
+}
+
+.blobs {
+  width: 100%;
+  background: url('./blobs.svg') no-repeat bottom / cover;
 }
