@@ -1,37 +1,19 @@
-.amazon-header {
-  background-color: rgb(19, 25, 33);
-  color: #f50041;
-  padding-left: 15px;
-  padding-right: 15px;
+/* .amazon-header {
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  z-index: 2;
-}
-
-.amazon-header-right-section{
+} */
+/* .amazon-header-right-section{
   color: blue;
-}
+} */
 .cart-quantity{
   color:white;
 }
 
-.amazon-header-left-section {
-  width: 180px;
-}
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   .amazon-header-left-section {
     width: unset;
   }
-}
+} */
 
 .header-link {
   display: inline-block;
@@ -42,20 +24,20 @@
   border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.header-link:hover {
+/* .header-link:hover {
   border: 1px solid white;
-}
+} */
 
-.amazon-logo {
+/* .amazon-logo {
   width: 100px;
   margin-top: 5px;
 }
 
 .amazon-mobile-logo {
   display: none;
-}
+} */
 
-@media (max-width: 575px) {
+/* @media (max-width: 575px) {
   .amazon-logo {
     display: none;
   }
@@ -65,17 +47,17 @@
     height: 35px;
     margin-top: 5px;
   }
-}
+} */
 
-.amazon-header-middle-section {
+/* .amazon-header-middle-section {
   flex: 1;
   max-width: 850px;
   margin-left: 10px;
   margin-right: 10px;
   display: flex;
-}
+} */
 
-.search-bar {
+/* .search-bar {
   flex: 1;
   width: 0;
   font-size: 16px;
@@ -102,14 +84,11 @@
   height: 22px;
   margin-left: 2px;
   margin-top: 3px;
-}
+} */
 
-.amazon-header-right-section {
-  width: 180px;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: end;
-}
+/* .amazon-header-right-section {
+ 
+} */
 
 .orders-link {
   color: white;
