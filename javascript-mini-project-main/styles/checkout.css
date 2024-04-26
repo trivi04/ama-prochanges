@@ -22,13 +22,8 @@
 
 .checkout-grid {
   display: grid;
-  /* Here, 1fr means the first column will take
-     up the remaining space in the grid. */
   grid-template-columns: 1fr 350px;
   column-gap: 12px;
-
-  /* Use align-items: start; to prevent the elements
-     in the grid from stretching vertically. */
   align-items: start;
 }
 
@@ -59,10 +54,6 @@
 
 @media (max-width: 1000px) {
   .payment-summary {
-    /* grid-row: 1 means this element will be placed into row
-      1 in the grid. (Normally, the row that an element is
-      placed in is determined by the order of the elements in
-      the HTML. grid-row overrides this default ordering). */
     grid-row: 1;
     margin-bottom: 12px;
   }
@@ -78,9 +69,6 @@
 
 .cart-item-details-grid {
   display: grid;
-  /* 100px 1fr 1fr; means the 2nd and 3rd column will
-     take up half the remaining space in the grid
-     (they will divide up the remaining space evenly). */
   grid-template-columns: 100px 1fr 1fr;
   column-gap: 25px;
 }
@@ -100,10 +88,7 @@
   border-width: 4px;
 border-color: #f50041;
   border-radius: 20%;
-  /* margin-left: auto;
-     margin-right auto;
-     Is a trick for centering an element horizontally
-     without needing a container. */
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -125,15 +110,7 @@ border-color: #f50041;
 
 @media (max-width: 1000px) {
   .delivery-options {
-    /* grid-column: 1 means this element will be placed
-       in column 1 in the grid. (Normally, the column that
-       an element is placed in is determined by the order
-       of the elements in the HTML. grid-column overrides
-       this default ordering).
-       
-       / span 2 means this element will take up 2 columns
-       in the grid (Normally, each element takes up 1
-       column in the grid). */
+
     grid-column: 1 / span 2;
   }
 }
@@ -174,9 +151,7 @@ border-color: #f50041;
 
 .payment-summary-row {
   display: grid;
-  /* 1fr auto; means the width of the 2nd column will be
-     determined by the elements inside the column (auto).
-     The 1st column will take up the remaining space. */
+
   grid-template-columns: 1fr auto;
 
   font-size: 15px;
@@ -219,43 +194,97 @@ border-color: #f50041;
   background-color: red;
 }
 
-/* .quantity-input {
-  width: 30px;
-  display: none;
-}
 
-.save-quantity-link {
-  display: none;
-}
-
-.is-editing-quantity .quantity-input {
-  display: initial;
-} */
-
-/* .is-editing-quantity .save-quantity-link {
-  display: initial;
-}
-.is-editing-quantity .quantity-label {
-  display: none;
-}
-
-.is-editing-quantity .update-quantity-link {
-  display: none;
-} */
-
-.amazon-header{
-  z-index: 2;
-  background-color: #f50041;
-}
-.amazon-header-right-section{
-  color: blue;
-}
-.cart-quantity{
-  color:white;
-}
 
 a{
   text-decoration: none;
   color: red;
   font-size: 20px;
+}
+
+.checkout-header {
+  height: 60px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1100px;
+
+  display: flex;
+  align-items: center;
+}
+
+.checkout-header-left-section {
+  width: 150px;
+}
+
+.amazon-logo {
+  width: 100px;
+  margin-top: 12px;
+  display: none;
+}
+
+
+@media (max-width: 575px) {
+  .checkout-header-left-section {
+    width: auto;
+  }
+}
+.checkout-header-middle-section {
+  flex: 1;
+  flex-shrink: 0;
+  text-align: center;
+
+  font-size: 25px;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+}
+
+.return-to-home-link {
+  color: rgb(0, 113, 133);
+  font-size: 23px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .checkout-header-middle-section {
+    font-size: 20px;
+    margin-right: 60px;
+  }
+
+  .return-to-home-link {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .checkout-header-middle-section {
+    margin-right: 5px;
+  }
+}
+
+.checkout-header-right-section {
+  text-align: right;
+  width: 150px;
+}
+
+@media (max-width: 1000px) {
+  .checkout-header-right-section {
+    width: auto;
+  }
 }
